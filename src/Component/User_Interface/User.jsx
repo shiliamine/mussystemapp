@@ -6,6 +6,7 @@ import { MdLockOutline } from "react-icons/md";
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
 import { Button, Flex } from "antd";
 import LearLogo from "../../assets/Lear_Corporation_logo.png";
+import { Divider } from 'antd';
 
 function Login_Interface() {
   const [User, setUser] = useState("");
@@ -25,7 +26,7 @@ function Login_Interface() {
   return (
     <div>
       <img src={LearLogo} className="img" alt="logo" />
-      <p className="text"> Make Up System</p>
+         <Divider className="text">Make Up System</Divider>
       <div className="user" >
         <Form
           name="basic"
