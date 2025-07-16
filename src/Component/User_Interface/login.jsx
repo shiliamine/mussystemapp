@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { UserOutlined } from "@ant-design/icons";
 import { Form, Input } from "antd";
-import "./User.css";
+import "./login.css";
 import { MdLockOutline } from "react-icons/md";
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
 import { Button, Flex } from "antd";
 import LearLogo from "../../assets/Lear_Corporation_logo.png";
-import { Divider } from 'antd';
+import { Divider } from "antd";
 
 function Login_Interface() {
   const [User, setUser] = useState("");
@@ -24,13 +24,13 @@ function Login_Interface() {
     alert();
   };
   return (
-    <div>
+    <div >
       <img src={LearLogo} className="img" alt="logo" />
-         <Divider className="text">Make Up System</Divider>
-      <div className="user" >
+      <Divider className="text">Make Up System</Divider>
+      <div className="user">
         <Form
           name="basic"
-          labelCol={{ span: 50}}
+          labelCol={{ span: 50 }}
           wrapperCol={{ span: 20 }}
           style={{ maxWidth: 600 }}
           initialValues={{ remember: true }}
@@ -40,7 +40,7 @@ function Login_Interface() {
           className="user"
         >
           <Form.Item
-          className="txt"
+            className="txt"
             name="username"
             rules={[{ required: true, message: "Please input your username!" }]}
           >
@@ -56,24 +56,18 @@ function Login_Interface() {
             rules={[{ required: true, message: "Please input your password!" }]}
           >
             <Input.Password
-             placeholder="Pasword"
+              placeholder="Pasword"
               prefix={<MdLockOutline />}
               variant="filled"
-              
-             />
+            />
           </Form.Item>
           <Form.Item name="remember" valuePropName="checked" label={null}>
-      <Button htmlType="submit" className="btn" type="primary" >
-              LOGIN
+<Button className="btn" htmlType="submit">
+              Login
             </Button>
-    </Form.Item>
-          
-
-        
+          </Form.Item>
         </Form>
-        
       </div>
-    
     </div>
   );
 }
